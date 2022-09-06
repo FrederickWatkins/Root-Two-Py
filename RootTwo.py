@@ -9,6 +9,10 @@ x = int(10 ** precision)
 for i in range(math.ceil(math.log2(precision))):
     x = int((x + (target // x)) // 2)
 
+file = open("out.txt", "w")
+
 out = str(x)
 
-print(out)
+file.write(out)
+
+file.close()
